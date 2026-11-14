@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"><title>Mindful Pages</title></head>
 <body>
-<nav><a class="logo" href="index.html">Mindful Pages</a><div class="links"><a class="on" href="index.html">Home</a><a href="books.html">All Books</a></div></nav>
+<nav><a class="logo" href="index.html">Mindful Pages</a><div class="links"><a href="index.html">Home</a><a href="index.html#books">Books</a></div></nav>
 <section class="hero">
   <div>
     <div class="eyebrow">Mindful Pages</div>
     <h1>Journals &amp; books to reflect, plan and grow.</h1>
     <p>Gratitude journals, planners and inspiration to help you slow down and write your own story.</p>
-    <a class="btn" href="books.html">Browse all books</a>
+    <a class="btn" href="#books">Browse books</a>
   </div>
   <img class="pic" id="heroPic" alt="Featured book cover">
 </section>
-<div class="head"><h2>Featured</h2><p>A few favourites to start with</p></div>
+<div class="head" id="books"><h2>All Books</h2><p>Tap a book to see details and buy it.</p></div>
 <main class="grid" id="grid"></main>
-<div class="more"><a class="btn" style="display:inline-block" href="books.html">View all books →</a></div>
 <footer>© <span class="yr"></span> Mindful Pages. Books are sold by their publishers.</footer>
 <script src="books.js"></script>
-<script>document.getElementById('heroPic').src=COVER;renderBooks('grid',books.slice(0,3));</script>
+<script>document.getElementById('heroPic').src=COVER;renderBooks('grid',books);</script>
 </body></html>
