@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ecomaura Books</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf7f2;--card:#fff;--ink:#1f1d1a;--muted:#6f6a62;--accent:#b5763a;--line:#ece6dc}
+@media(prefers-color-scheme:dark){:root{--bg:#161412;--card:#201d1a;--ink:#f3eee6;--muted:#a59e92;--accent:#d99a5b;--line:#2f2a25}}
+*{box-sizing:border-box;margin:0}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+header{text-align:center;padding:72px 20px 40px}
+.brand{letter-spacing:.25em;text-transform:uppercase;font-size:.8rem;color:var(--accent);font-weight:600}
+h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2.2rem,6vw,3.8rem);margin:10px 0 12px}
+header p{color:var(--muted);max-width:520px;margin:auto}
+.grid{max-width:1100px;margin:0 auto;padding:20px 20px 80px;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:28px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,.12)}
+.cover{aspect-ratio:3/4;border-radius:10px;overflow:hidden;position:relative;box-shadow:0 8px 20px rgba(0,0,0,.18)}
+.cover img{width:100%;height:100%;object-fit:cover;display:block}
+.fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:18px;color:#fff;font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700}
+.card h2{font-family:'Playfair Display',serif;font-size:1.15rem;margin:16px 0 4px}
+.card small{color:var(--muted);margin-bottom:16px}
+.btn{margin-top:auto;display:block;text-align:center;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;padding:11px;border-radius:999px;font-size:.92rem;transition:filter .2s}
+.btn:hover{filter:brightness(1.1)}
+footer{text-align:center;color:var(--muted);font-size:.85rem;padding:30px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">Ecomaura</div>
+  <h1>Books &amp; Journals</h1>
+  <p>Journals, planners and inspiration to help you reflect, plan and grow. Tap any book to buy it from the publisher.</p>
+</header>
+
+<main class="grid" id="grid"></main>
+<footer>© <span id="y"></span> Ecomaura. Books are sold by their publishers.</footer>
+
+<script>
+/* Put cover images in a "covers" folder next to this file, named as below (jpg). */
+const books=[
+ {t:"Gratitude Journal",s:"gratitude-journal",p:"White Falcon Publishing",u:"https://store.whitefalconpublishing.com/collections/latest-books/products/gratitude-journal",c:"#b5763a"},
+ {t:"My Diary of Dreams",s:"my-diary-of-dreams",p:"White Falcon Publishing",u:"https://store.whitefalconpublishing.com/products/my-diary-of-dreams",c:"#6b4f8a"},
+ {t:"It Works",s:"it-works",p:"Literature Chronicle",u:"https://literaturechronicle.com/product/it-works/",c:"#2f6f6a"},
+ {t:"Daily Planner",s:"daily-planner",p:"Literature Chronicle",u:"https://literaturechronicle.com/product/daily-planner/",c:"#3b5a8c"},
+ {t:"Travel Gratitude Journal",s:"travel-gratitude-journal",p:"Literature Chronicle",u:"https://literaturechronicle.com/product/travel-gratitude-journal/",c:"#c2603f"},
+ {t:"My Top 10 Goals Journal",s:"my-top-10-goals-journal",p:"Literature Chronicle",u:"https://literaturechronicle.com/product/my-top-10-goals-journal/",c:"#8a6d1f"},
+ {t:"Letters to God: Hello God, It's Me",s:"letters-to-god-hello-god-its-me",p:"Literature Chronicle",u:"https://literaturechronicle.com/product/letters-to-god-hello-god-its-me/",c:"#4a6b3a"},
+ {t:"5 Year Memory Journal",s:"5-year-memory-journal",p:"Literature Chronicle",u:"https://literaturechronicle.com/product/5-year-memory-journal/",c:"#8a3f55"},
+ {t:"Magnificent Outcome",s:"magnificent-outcome",p:"Literature Chronicle",u:"https://literaturechronicle.com/product/magnificent-outcome/",c:"#2c3e50"}
+];
+const g=document.getElementById('grid');
+books.forEach(b=>{
+  const a=document.createElement('article');a.className='card';
+  const alt=b.t.replace(/"/g,'&quot;');
+  a.innerHTML=`<a class="cover" href="${b.u}" target="_blank" rel="noopener" aria-label="${alt}">
+    <div class="fallback" style="background:linear-gradient(145deg,${b.c},#1f1d1a)">${b.t}</div>
+    <img src="covers/${b.s}.jpg" alt="${alt} cover" loading="lazy" onerror="this.remove()">
+  </a>
+  <h2>${b.t}</h2><small>${b.p}</small>
+  <a class="btn" href="${b.u}" target="_blank" rel="noopener">Buy Now →</a>`;
+  g.appendChild(a);
+});
+document.getElementById('y').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
