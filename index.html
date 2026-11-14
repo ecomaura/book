@@ -39,7 +39,7 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:30px;border
 <footer>© <span id="y"></span> Mindful Pages. Books are sold by their publishers.</footer>
 
 <script>
-/* Put cover images in a "covers" folder next to this file, named as below (jpg). */
+/* All books currently share covers/cover.webp. To use a different cover per book, change the img src in the card template to covers/${b.s}.jpg. */
 const books=[
  {t:"Gratitude Journal",s:"gratitude-journal",p:"White Falcon Publishing",u:"https://store.whitefalconpublishing.com/collections/latest-books/products/gratitude-journal",c:"#b5763a"},
  {t:"My Diary of Dreams",s:"my-diary-of-dreams",p:"White Falcon Publishing",u:"https://store.whitefalconpublishing.com/products/my-diary-of-dreams",c:"#6b4f8a"},
@@ -57,7 +57,7 @@ books.forEach(b=>{
   const alt=b.t.replace(/"/g,'&quot;');
   a.innerHTML=`<a class="cover" href="${b.u}" target="_blank" rel="noopener" aria-label="${alt}">
     <div class="fallback" style="background:linear-gradient(145deg,${b.c},#1f1d1a)">${b.t}</div>
-    <img src="covers/${b.s}.jpg" alt="${alt} cover" loading="lazy" onerror="this.remove()">
+    <img src="covers/cover.webp" alt="${alt} cover" loading="lazy" onerror="this.remove()">
   </a>
   <h2>${b.t}</h2><small>${b.p}</small>
   <a class="btn" href="${b.u}" target="_blank" rel="noopener">Buy Now →</a>`;
