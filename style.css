@@ -50,3 +50,10 @@ html{scroll-behavior:smooth}
 .cbtns .btn{display:inline-block;padding:13px 28px}
 .cbtns .wa{background:#25a55a}
 .flinks{margin-bottom:8px}.flinks a{color:var(--accent);text-decoration:none}
+
+.connect{padding:20px 24px 8px}
+.icons{display:flex;gap:16px;justify-content:center}
+.ic{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;color:#fff;text-decoration:none;transition:transform .2s,filter .2s}
+.ic:hover{transform:translateY(-3px);filter:brightness(1.1)}
+.ic.ig{background:linear-gradient(45deg,#f09433,#dc2743 55%,#bc1888)}
+.ic.wa{background:#25a55a}
