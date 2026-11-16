@@ -11,9 +11,9 @@
   </div>
   <img class="pic" id="heroPic" alt="Featured book cover">
 </section>
-<div class="head" id="books"><h2>All Books</h2><p>Tap a book to see details and buy it.</p></div>
+<div class="head" id="books"><h2>All Books</h2><p>Tap Buy Now to order from the publisher.</p></div>
 <main class="grid" id="grid"></main>
 <footer>© <span class="yr"></span> Mindful Pages. Books are sold by their publishers.</footer>
 <script src="books.js"></script>
-<script>document.getElementById('heroPic').src=COVER;renderBooks('grid',books);</script>
+<script>document.getElementById('heroPic').src=books[1].img;renderBooks('grid',books);</script>
 </body></html>
