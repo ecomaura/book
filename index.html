@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"><title>Mindful Pages</title></head>
 <body>
-<nav><a class="logo" href="index.html">Mindful Pages</a><div class="links"><a href="index.html">Home</a><a href="index.html#books">Books</a></div></nav>
+<nav><a class="logo" href="index.html">Mindful Pages</a><div class="links"><a href="index.html">Home</a><a href="index.html#books">Books</a><a href="#connect">Connect</a></div></nav>
 <section class="about">
   <img class="aphoto" src="covers/author.jpg" alt="Soniya Kalani, author">
   <div class="atext">
@@ -23,9 +23,17 @@
     <a class="btn" href="#books">Browse books</a>
   </div>
 </section>
+<section class="connect" id="connect">
+  <h2>Stay Connected</h2>
+  <p>Follow Soniya on Instagram and join our community of gratitude.</p>
+  <div class="cbtns">
+    <a class="btn ig" href="https://www.instagram.com/booksbysoniya?dlrf=MTZtdGJwY3Iycnk0eg%3D%3D&amp;utm_source=qr" target="_blank" rel="noopener">Follow on Instagram</a>
+    <a class="btn wa" href="https://chat.whatsapp.com/Ep12rMY7xhL0QhYHvskIlP?s=cl&amp;p=i&amp;iam=2" target="_blank" rel="noopener">Join Global Gratitude Family on WhatsApp</a>
+  </div>
+</section>
 <div class="head" id="books"><h2>All Books</h2><p>Tap Buy Now to order from the publisher.</p></div>
 <main class="grid" id="grid"></main>
-<footer>© <span class="yr"></span> Mindful Pages. Books are sold by their publishers.</footer>
+<footer><div class="flinks"><a href="https://www.instagram.com/booksbysoniya?dlrf=MTZtdGJwY3Iycnk0eg%3D%3D&amp;utm_source=qr" target="_blank" rel="noopener">Instagram</a> · <a href="https://chat.whatsapp.com/Ep12rMY7xhL0QhYHvskIlP?s=cl&amp;p=i&amp;iam=2" target="_blank" rel="noopener">WhatsApp Group</a></div>© <span class="yr"></span> Mindful Pages. Books are sold by their publishers.</footer>
 <script src="books.js"></script>
 <script>renderBooks('grid',books);</script>
 </body></html>
