@@ -2,18 +2,30 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"><title>Mindful Pages</title></head>
 <body>
 <nav><a class="logo" href="index.html">Mindful Pages</a><div class="links"><a href="index.html">Home</a><a href="index.html#books">Books</a></div></nav>
-<section class="hero">
-  <div>
-    <div class="eyebrow">Mindful Pages</div>
-    <h1>Journals &amp; books to reflect, plan and grow.</h1>
-    <p>Gratitude journals, planners and inspiration to help you slow down and write your own story.</p>
+<section class="about">
+  <img class="aphoto" src="covers/author.jpg" alt="Soniya Kalani, author">
+  <div class="atext">
+    <div class="eyebrow">About the Author</div>
+    <h1>The Woman Behind the Words</h1>
+    <p>Soniya Kalani is a Journal Creator, and a woman whose life journey has taught her the extraordinary power of faith, gratitude, and the human spirit.</p>
+    <p>Her story is one of love, loss, courage, resilience, and rediscovering life.</p>
+    <p>She experienced the heartbreak of losing her mother at just thirteen. At an age when most children are still finding their way, Soniya found herself growing up sooner than she was ready for, carrying responsibilities and learning to be strong even when life felt difficult.</p>
+    <p>Years later, she experienced the loss of her husband after walking beside him through his battle with cancer. Life brought her moments of grief, loneliness, disappointment, and questions that did not always have easy answers.</p>
+    <p>But somewhere along the way, she made a personal decision. She would not allow the painful chapters of her life to define the rest of her story.</p>
+    <p>She turned towards God, prayer, gratitude, forgiveness, and the written word. She began writing her thoughts, counting her blessings, expressing her dreams, and finding reasons to be thankful even on difficult days.</p>
+    <p>Gratitude gradually became more than a daily practice. It became a way of living.</p>
+    <p>The journals she once created for herself eventually became books she could share with the world. What started as a personal journey of healing and self-discovery grew into a mission to help others find hope, clarity, and strength within themselves.</p>
+    <p>Today, Soniya is the author of many published journals. Through her writing, coaching, affirmations, and gratitude practices, she encourages people to believe in new beginnings and take ownership of the lives they wish to create.</p>
+    <p>She believes that even when life breaks your heart, it does not have to break your spirit. That prayer can give you strength, gratitude can change your perspective, and one small decision each day can move your life in a new direction.</p>
+    <p>Her greatest wish is that someone, somewhere, reading her words, feels a little less alone, finds a reason to smile, and remembers that their story is still being written.</p>
+    <p>Because Soniya&rsquo;s journey is not about having a perfect life. It is about learning to love life again, finding God in every season, and choosing gratitude through it all.</p>
+    <p>Soniya&rsquo;s intention is to simply bring joy to billions of people on earth through her work.</p>
     <a class="btn" href="#books">Browse books</a>
   </div>
-  <img class="pic" id="heroPic" alt="Featured book cover">
 </section>
 <div class="head" id="books"><h2>All Books</h2><p>Tap Buy Now to order from the publisher.</p></div>
 <main class="grid" id="grid"></main>
 <footer>© <span class="yr"></span> Mindful Pages. Books are sold by their publishers.</footer>
 <script src="books.js"></script>
-<script>document.getElementById('heroPic').src=books[1].img;renderBooks('grid',books);</script>
+<script>renderBooks('grid',books);</script>
 </body></html>
